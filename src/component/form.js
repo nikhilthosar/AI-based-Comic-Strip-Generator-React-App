@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Container, Row, Col , Card, Button} from 'react-bootstrap';
 import ApiCaller from './apicaller.js';
-import MyImageComponent from './imagecomp'; // Assuming you have a separate component for rendering images
 import '../App.css';
 
 export function Myform() {
