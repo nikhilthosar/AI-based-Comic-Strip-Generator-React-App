@@ -4,6 +4,7 @@ import ApiCaller from './apicaller.js';
 import '../App.css';
 
 export function Myform() {
+
   const [formData, setFormData] = useState({
     prompts: [],
   });
@@ -47,7 +48,7 @@ export function Myform() {
       }));
     }
   };
-
+  
   const handleApiSuccess = async (responseBlob) => {
     try {
       // Check if the response is an image
@@ -208,6 +209,7 @@ export function Myform() {
                     data={formData}
                     onSuccess={handleApiSuccess}
                     onError={handleApiError}
+                    clearContainer={clearContainer}
                   />
                 </Row>
               </Form.Group>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
-async function query(data) {
-  // const [prompt, setPropmt] = useState();
 
+
+
+async function query(data) {
   const response = await fetch(
     "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
     {
@@ -23,7 +24,8 @@ query({ "inputs": "Astronaut riding a horse" }).then((response) => {
   // Use image
 });
 
-export default function ApiCaller({ data, onSuccess, onError }) {
+export default function ApiCaller({ data, onSuccess, onError}) {
+  
   const handleApiCall = async () => {
     try {
       // Ensure 'prompts' property is present in 'data'
@@ -32,6 +34,11 @@ export default function ApiCaller({ data, onSuccess, onError }) {
         for (const prompt of data.prompts) {
           console.log(prompt);
           const result = await query({ inputs: prompt });
+          console.log(result.size);
+          if(result.size == 842)
+          {
+            alert('API responded with blank image.');
+          }
           console.log(result);
           onSuccess(result);
         }
@@ -45,18 +52,20 @@ export default function ApiCaller({ data, onSuccess, onError }) {
 
   return (
     <>
-      <Button
-        variant="primary"
-        type="button"
-        style={{
-          display: 'block', // Ensures the button takes up full width
-          backgroundColor: 'black',
-          width: '100%',
-          margin: 'auto',
-        }}
-        onClick={handleApiCall}>
-        Generate It
-      </Button>
+
+<Button
+  variant="outline-light"
+  type="button"
+  className="custom-button"
+  style={{
+    display: 'block',
+    width: '100%',
+    margin: 'auto',
+  }}
+  onClick={handleApiCall}
+>
+  Generate It
+</Button>
     </>
   );
 }
