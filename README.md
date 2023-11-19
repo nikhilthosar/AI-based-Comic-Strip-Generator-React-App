@@ -7,6 +7,8 @@
    b. When API reponds with blank image, pop up with message "API responded with blank image.".
 5. Designed intuitive UI with good design.
 
+# Tech Used
+1. Implemented Project using React JS.
 
 # Getting Started with Create React App
 
