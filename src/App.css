@@ -102,8 +102,8 @@
 .prompt-title{
    color:rgb(197, 206, 214);
    font-family: 'Vina Sans', sans-serif;
-   margin-left: '20px';
-  padding: '20px';
+   marginleft: '20px';
+   padding: '20px';
 }
 
 @font-face {
@@ -142,4 +142,8 @@ align-items: center;
 }
 Row {
      background-color: #61dafb;
+}
+
+.image-label{
+  color:aliceblue;
 }

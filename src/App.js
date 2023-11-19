@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { Myform } from './component/form.js';
 import { Mynavbar } from './component/navbar.js';
-import { Mygallery } from './component/gallery.js';
 import {Mytitle} from './component/title.js';
  
 

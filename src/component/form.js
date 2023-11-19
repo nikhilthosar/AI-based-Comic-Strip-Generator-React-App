@@ -114,8 +114,8 @@ export function Myform() {
   return (
     <>
       <div class="main-form-container">
-        <Row><h4 class='prompt-title'>Describe your Comic Sequence</h4></Row>
-          <Row className="" >
+        <Row><h4 style={{ marginLeft: '20px' }} class='prompt-title'>Describe your Comic Sequence</h4></Row>
+          <Row >
             {/* Form Container on the Left */}
             <Col className="prompt-col" md={3}>
               <Form>
@@ -254,7 +254,7 @@ export function Myform() {
 
             {/* Image Display Component on the Right */}
             <Col className="images-col" md={9}>
-              <Container style={{ border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
+            <Container style={{border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
               <div className="image-grid">
                   {imageUrls.map((imageUrl, index) => (
                     <div key={index} className="image-container">
