@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 
-
+/*========================================================
+  Function:: query
+  Use:: This function consist API key and details 
+  ==========================================================*/
 
 async function query(data) {
   const response = await fetch(
@@ -24,8 +27,13 @@ query({ "inputs": "Astronaut riding a horse" }).then((response) => {
   // Use image
 });
 
-export default function ApiCaller({ data, onSuccess, onError, clear}) {
-  
+/*=========================================================
+  Function:: ApiCaller
+  Use:: This function requests the API in loop for 10 times and returns the response back.
+  ==========================================================*/
+
+export default function ApiCaller({ data, onSuccess, onError, clear }) {
+
   const handleApiCall = async () => {
     try {
       clear();
@@ -36,8 +44,7 @@ export default function ApiCaller({ data, onSuccess, onError, clear}) {
           console.log(prompt);
           const result = await query({ inputs: prompt });
           console.log(result.size);
-          if(result.size == 842)
-          {
+          if (result.size == 842) {
             alert('API responded with blank image.');
           }
           console.log(result);
@@ -54,19 +61,19 @@ export default function ApiCaller({ data, onSuccess, onError, clear}) {
   return (
     <>
 
-<Button
-  variant="outline-light"
-  type="button"
-  className="custom-button"
-  style={{
-    display: 'block',
-    width: '100%',
-    margin: 'auto',
-  }}
-  onClick={handleApiCall}
->
-  Generate It
-</Button>
+      <Button
+        variant="outline-light"
+        type="button"
+        className="custom-button"
+        style={{
+          display: 'block',
+          width: '100%',
+          margin: 'auto',
+        }}
+        onClick={handleApiCall}
+      >
+        Generate It
+      </Button>
     </>
   );
 }

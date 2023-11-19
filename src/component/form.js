@@ -10,6 +10,8 @@ export function Myform() {
   const [formData, setFormData] = useState({
     prompts: [],
   });
+
+  /*Speech bubble texts array*/
   const speechBubbleTexts = [
     "Wow!",
     "Hurray!",
@@ -23,8 +25,16 @@ export function Myform() {
     "Dashtoon is Amazing!"
   ];
 
-  // Initialize imageUrls state with an empty array
+  // Declare and initialize Arrays
   const [imageUrls, setImageUrls] = useState([]);
+
+
+  /*========================================================
+  Function:: handleChange
+  Use:: This function is used for taking input prompt values 
+        and adding it to a list/array to be sent to apicaller.js 
+        to be processed one by one.
+  ==========================================================*/
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +60,15 @@ export function Myform() {
       }));
     }
   };
-  
+
+
+  /*========================================================
+    Function:: handleApiSuccess
+    Use:: This function convert response blob packet received to URL Image URL 
+          so that, it can be displayed to user on UI.
+          In case error occurs, it gives feedback to user.
+    ==========================================================*/
+
   const handleApiSuccess = async (responseBlob) => {
     try {
       // Check if the response is an image
@@ -70,6 +88,11 @@ export function Myform() {
   };
 
 
+  /*========================================================
+  Function:: handleApiError
+  Use:: This function Handled Error received from API.
+  ==========================================================*/
+
   const handleApiError = (error) => {
     // Handle the API call error
     console.error('Error calling API:', error);
@@ -81,10 +104,10 @@ export function Myform() {
         <Row >
           {/* Form Container on the Left */}
           <Col className="prompt-col" md={3}>
-          
+
             <Form>
               <Form.Group controlId="prompt1" className="form-inline">
-              <h5 class='prompt-title'>Describe your Comic Sequence</h5>
+                <h5 class='prompt-title'>Describe your Comic Sequence</h5>
                 <Row className="mb-2">
                   <Col>
                     <Form.Control
@@ -220,7 +243,7 @@ export function Myform() {
 
           {/* Image Display Component on the Right */}
           <Col className="images-col" md={9}>
-            <Row className = "mb-4"></Row>
+            <Row className="mb-4"></Row>
             <Container style={{ border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
               <div className="image-grid">
                 {imageUrls.map((imageUrl, index) => (

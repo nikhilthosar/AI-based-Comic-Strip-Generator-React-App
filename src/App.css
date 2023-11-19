@@ -99,10 +99,11 @@
    font-family: 'Vina Sans', sans-serif;
  }
 
- h6{
-  font-family: myFirstFont;
-  color: rgb(76, 31, 85);
+ h6 {
+   font-family: myFirstFont;
+   color: rgb(76, 31, 85);
  }
+
  .navbar-title {
    font-family: 'Vina Sans', sans-serif;
  }
@@ -119,11 +120,11 @@
    }
 
    .image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    /* Adjust the gap between images as needed */
-  }
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+     /* Adjust the gap between images as needed */
+   }
  }
 
  .form-inline {
@@ -142,26 +143,34 @@
  }
 
  .image-container {
-  position: relative;
-}
+   position: relative;
+ }
 
-.speech-bubble {
-  position: absolute;
-  top: 5px; /* Adjust the top position */
-  right: 5px; /* Adjust the right position */
-  max-width: 150px; /* Adjust the maximum width of the speech bubble */
-  background-color: #ffffff; /* Adjust the background color of the speech bubble */
-  padding: 8px; /* Adjust the padding inside the speech bubble */
-  border-radius: 10px; /* Adjust the border radius for rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-}
+ .speech-bubble {
+   position: absolute;
+   top: 5px;
+   /* Adjust the top position */
+   right: 5px;
+   /* Adjust the right position */
+   max-width: 150px;
+   /* Adjust the maximum width of the speech bubble */
+   background-color: #ffffff;
+   /* Adjust the background color of the speech bubble */
+   padding: 8px;
+   /* Adjust the padding inside the speech bubble */
+   border-radius: 10px;
+   /* Adjust the border radius for rounded corners */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   /* Add a subtle shadow */
+ }
 
-.speech-text {
-  margin: 0; /* Remove default margin from the paragraph */
-  font-size: 12px; /* Adjust the font size of the text inside the speech bubble */
-}
+ .speech-text {
+   margin: 0;
+   /* Remove default margin from the paragraph */
+   font-size: 12px;
+   /* Adjust the font size of the text inside the speech bubble */
+ }
 
-.prompt-col {
-  background-color: black;
-}
-
+ .prompt-col {
+   background-color: black;
+ }
