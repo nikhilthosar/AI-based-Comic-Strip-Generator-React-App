@@ -120,7 +120,7 @@ export function Myform() {
             <Col className="prompt-col" md={3}>
               <Form>
                 <Form.Group controlId="prompt1" className="form-inline">
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -133,7 +133,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -145,7 +145,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -157,7 +157,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -169,7 +169,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -181,7 +181,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -193,7 +193,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -205,7 +205,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -217,7 +217,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
@@ -229,7 +229,7 @@ export function Myform() {
                       />
                     </Col>
                   </Row>
-                  <Row className = "mb-3">
+                  <Row className = "mb-2">
                     <Col>
                       <Form.Control
                         required
