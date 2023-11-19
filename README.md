@@ -1,4 +1,4 @@
-#Product Feature Description
+# Product Feature Description
 1. Implemented UI as per requirement with 10 input prompts and a Comic Strip Frame.
 2. Application is responsive and can be used comfortably on Desktop and Mobile Phone aspect ratio.
 3. Implemented API call successfully and retrived the AI generated image data given input texts.
