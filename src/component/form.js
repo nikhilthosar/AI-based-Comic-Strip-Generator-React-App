@@ -4,7 +4,9 @@ import ApiCaller from './apicaller.js';
 import '../App.css';
 
 export function Myform() {
-
+  const clearContainer = () => {
+    setImageUrls([]);
+  };
   const [formData, setFormData] = useState({
     prompts: [],
   });
@@ -209,7 +211,7 @@ export function Myform() {
                     data={formData}
                     onSuccess={handleApiSuccess}
                     onError={handleApiError}
-                    clearContainer={clearContainer}
+                    clear={clearContainer}
                   />
                 </Row>
               </Form.Group>

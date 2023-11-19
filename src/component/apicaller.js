@@ -24,10 +24,11 @@ query({ "inputs": "Astronaut riding a horse" }).then((response) => {
   // Use image
 });
 
-export default function ApiCaller({ data, onSuccess, onError}) {
+export default function ApiCaller({ data, onSuccess, onError, clear}) {
   
   const handleApiCall = async () => {
     try {
+      clear();
       // Ensure 'prompts' property is present in 'data'
       if (data && data.prompts) {
         // Iterate over each prompt and make a separate API call
