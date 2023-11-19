@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { Myform } from './component/form.js';
 import { Mynavbar } from './component/navbar.js';
-import { Mytitle } from './component/title.js';
-
+import { MyAlert } from './component/alert.js';
 
 function App() {
   return (

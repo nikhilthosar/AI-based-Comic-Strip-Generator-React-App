@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Form, Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 import ApiCaller from './apicaller.js';
 import '../App.css';
 
@@ -7,6 +7,18 @@ export function Myform() {
   const [formData, setFormData] = useState({
     prompts: [],
   });
+  const speechBubbleTexts = [
+    "Wow!",
+    "Hurray!",
+    "This is awesome! ",
+    "Hey!",
+    "I am good",
+    "Bang",
+    "Arhhhh!",
+    "Looks amazing",
+    "Good Work Nik!",
+    "Dashtoon is Amazing!"
+  ];
 
   // Initialize imageUrls state with an empty array
   const [imageUrls, setImageUrls] = useState([]);
@@ -43,9 +55,11 @@ export function Myform() {
         // If it's an image, create a URL for the blob and set it in the array
         const imageUrl = URL.createObjectURL(responseBlob);
         setImageUrls((prevImageUrls) => [...prevImageUrls, imageUrl]);
+        // Show a pop-up (e.g., using alert, or you can use your modal here)
       } else {
         // If it's not an image, handle it accordingly
         console.warn('Received data is not an image.');
+        alert('Data Received from API is not an Image.');
       }
     } catch (error) {
       console.error('Error handling image response:', error);
@@ -61,12 +75,13 @@ export function Myform() {
   return (
     <>
       <div class="main-form-container">
-        <Row><h4 style={{ marginLeft: '20px' }} class='prompt-title'>Describe your Comic Sequence</h4></Row>
         <Row >
           {/* Form Container on the Left */}
           <Col className="prompt-col" md={3}>
+          
             <Form>
               <Form.Group controlId="prompt1" className="form-inline">
+              <h5 class='prompt-title'>Describe your Comic Sequence</h5>
                 <Row className="mb-2">
                   <Col>
                     <Form.Control
@@ -76,7 +91,7 @@ export function Myform() {
                       value={formData.prompts[0]}
                       placeholder='Prompt 1'
                       onChange={handleChange}
-                      style={{ display: 'stretch' }}
+                      style={{ width: '100%' }}
                     />
                   </Col>
                 </Row>
@@ -201,6 +216,7 @@ export function Myform() {
 
           {/* Image Display Component on the Right */}
           <Col className="images-col" md={9}>
+            <Row className = "mb-4"></Row>
             <Container style={{ border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
               <div className="image-grid">
                 {imageUrls.map((imageUrl, index) => (
@@ -210,12 +226,16 @@ export function Myform() {
                       alt={`API Response Image ${index + 1}`}
                       className="grid-image"
                     />
+                    <div className="speech-bubble">
+                      <p className="speech-text">{speechBubbleTexts[index]}</p>
+                    </div>
                     <p className="image-label">Prompt: {index + 1}</p>
                     {console.log(formData.prompts)}
                   </div>
                 ))}
               </div>
             </Container>
+            <Row><h5 style={{ marginBottom: '25px' }} class='prompt-title'>Comic Strip Frame</h5></Row>
           </Col>
         </Row>
       </div>

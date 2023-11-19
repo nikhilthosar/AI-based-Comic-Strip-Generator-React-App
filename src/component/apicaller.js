@@ -51,10 +51,11 @@ export default function ApiCaller({ data, onSuccess, onError }) {
         style={{
           display: 'block', // Ensures the button takes up full width
           backgroundColor: 'black',
-          width: '100%'
+          width: '100%',
+          margin: 'auto',
         }}
         onClick={handleApiCall}>
-        Generate
+        Generate It
       </Button>
     </>
   );
