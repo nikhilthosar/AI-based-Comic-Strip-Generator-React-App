@@ -7,6 +7,10 @@ import { Button } from 'react-bootstrap';
   Use:: This function consist API key and details 
   ==========================================================*/
 
+
+
+
+  
 async function query(data) {
   const response = await fetch(
     "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
@@ -67,7 +71,7 @@ export default function ApiCaller({ data, onSuccess, onError, clear }) {
         className="custom-button"
         style={{
           display: 'block',
-          width: '100%',
+          width: '70%',
           margin: 'auto',
         }}
         onClick={handleApiCall}

@@ -57,7 +57,6 @@
    height: 600px;
    overflow-y: auto;
    background-color: #8e8f91;
-   background-image: url("../public/background.jpg")
  }
 
 
@@ -86,10 +85,14 @@
  .prompt-title {
    color: rgb(197, 206, 214);
    font-family: 'Vina Sans', sans-serif;
-   marginleft: '25px';
    padding: '20px';
+   text-align: center;
  }
 
+ .frame-title {
+  color: rgb(197, 206, 214);
+  font-family: 'Vina Sans', sans-serif;
+}
  @font-face {
    font-family: myFirstFont;
    src: url(../public/KOMIKAX_.ttf);
@@ -131,7 +134,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 80%;
+   width: 70%;
  }
 
  Row {
@@ -173,4 +176,18 @@
 
  .prompt-col {
    background-color: black;
+   margin: "30px"
  }
+
+ .images-col {
+  margin: "30px"
+}
+ .form-control {
+  background-color: black;
+  margin: "30px"
+}
+
+.mb-2 {
+   margin-left: '10px';
+   margin-right: '10px'
+}

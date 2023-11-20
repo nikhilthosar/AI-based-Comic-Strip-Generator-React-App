@@ -104,11 +104,9 @@ export function Myform() {
         <Row >
           {/* Form Container on the Left */}
           <Col className="prompt-col" md={3}>
-
             <Form>
-              <Form.Group controlId="prompt1" className="form-inline">
-                <h5 class='prompt-title'>Describe your Comic Sequence</h5>
-                <Row className="mb-2">
+            <h5 className='prompt-title'>Describe your Comic Sequence</h5>
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -121,7 +119,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -133,7 +131,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -145,7 +143,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -157,7 +155,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -169,7 +167,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -181,7 +179,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -193,7 +191,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -205,7 +203,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -217,7 +215,7 @@ export function Myform() {
                     />
                   </Col>
                 </Row>
-                <Row className="mb-2">
+                <Row className="mb-2 mx-3">
                   <Col>
                     <Form.Control
                       required
@@ -237,13 +235,13 @@ export function Myform() {
                     clear={clearContainer}
                   />
                 </Row>
-              </Form.Group>
             </Form>
           </Col>
 
           {/* Image Display Component on the Right */}
           <Col className="images-col" md={9}>
             <Row className="mb-4"></Row>
+            <div  style={{ margin: '20px' }}>
             <Container style={{ border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
               <div className="image-grid">
                 {imageUrls.map((imageUrl, index) => (
@@ -262,7 +260,8 @@ export function Myform() {
                 ))}
               </div>
             </Container>
-            <Row><h5 style={{ marginBottom: '25px' }} class='prompt-title'>Comic Strip Frame</h5></Row>
+            </div>
+            <Row><h5 style={{ marginBottom: '25px' , marginLeft:'20px'}} class='frame-title'>Comic Strip Frame</h5></Row>
           </Col>
         </Row>
       </div>
