@@ -11,6 +11,8 @@
 # Tech Used
 1. Implemented Project using React JS.
 
+![Alt text](https://github.com/nikhilthosar/Dashtoon-React-App/blob/main/public/UI.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
