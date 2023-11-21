@@ -241,7 +241,7 @@ export function Myform() {
           {/* Image Display Component on the Right */}
           <Col className="images-col" md={9}>
             <Row className="mb-4"></Row>
-            <div  style={{ margin: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px' }}>
             <Container style={{ border: "2px solid purple", minWidth: "400px", minHeight: "400px" }}>
               <div className="image-grid">
                 {imageUrls.map((imageUrl, index) => (
