@@ -3,8 +3,8 @@
 2. Application is responsive and can be used comfortably on Desktop and Mobile Phone aspect ratio.
 3. Implemented API call successfully and retrived the AI generated image data given input texts.
 4. Implemented error handlings, in case API is not responding as expected and internal mechanisms.
-   a. Handled error, when API don't respond with image format, feedback will be given to user through pop up message "Data Received from API is not an Image." in that case.
-   b. When API reponds with blank image, pop up with message "API responded with blank image.".
+   a) Handled error, when API don't respond with image format, feedback will be given to user through pop up message "Data Received from API is not an Image." in that case.
+   b) When API reponds with blank image, pop up with message "API responded with blank image.".
 5. Designed intuitive UI with good design.
 6. Annotated the speech bubbles to comic strip.
 
